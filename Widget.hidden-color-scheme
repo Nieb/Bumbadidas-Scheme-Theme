@@ -1,0 +1,49 @@
+{
+    "name": "Bumbadida's Widgets",
+    "author": "Bumbadida",
+
+    "variables":
+    {
+        "COLOR__Background":        "rgb( 24, 24, 24)",
+        "COLOR__Foreground":        "rgb(192,189,182)",
+        "COLOR__LineHighlight":     "rgb( 32, 32, 32)",
+        "COLOR__Caret":             "rgb(211,208,200)",
+        "COLOR__Invisibles":        "rgb(116,115,105)",
+        "COLOR__Selection":         "rgb( 88, 88, 88)",
+        "COLOR__SelectionBorder":   "rgb( 64, 64, 64)",
+        "COLOR__SelectionInactive": "rgb( 64, 64, 64)",
+
+        "black": "hsl(0, 0%, 0%)",
+        "black2": "hsl(60, 2%, 11%)",
+        "blue": "hsl(204, 62%, 30%)",
+        "blue2": "hsl(201, 31%, 71%)",
+        "blue3": "hsl(216, 100%, 50%)",
+        "blue4": "hsl(209, 26%, 73%)",
+        "blue5": "hsl(214, 45%, 47%)",
+        "blue6": "hsl(160, 23%, 23%)",
+        "grey": "hsl(202, 7%, 68%)",
+        "grey2": "hsl(0, 0%, 75%)",
+        "orange": "hsl(29, 91%, 54%)",
+        "white": "hsl(0, 0%, 100%)"
+    },
+    "globals":
+    {
+        "background":         "var(COLOR__Background)",
+        "foreground":         "var(COLOR__Foreground)",
+        "caret":              "var(COLOR__Caret)",
+        "invisibles":         "var(COLOR__Invisibles)",
+        "line_highlight":     "var(COLOR__LineHighlight)",
+        "selection":          "var(COLOR__Selection)",
+        "selection_border":   "var(COLOR__SelectionBorder)",
+        "inactive_selection": "var(COLOR__SelectionInactive)"
+    },
+    //"rules":
+    //[
+    //    { "name": "Comment", "scope": "comment"         , "foreground": "var(blue3)", "font_style": "italic" },
+    //    { "name": "Keyword", "scope": "keyword, storage", "foreground": "var(blue5)"  },
+    //    { "scope": "constant"                           , "foreground": "var(blue6)"  },
+    //    { "scope": "string"                             , "foreground": "var(blue)"   },
+    //    { "scope": "constant.character.escape"          , "foreground": "var(orange)" }
+    //]
+}
+
