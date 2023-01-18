@@ -1,0 +1,849 @@
+{
+    "name": "Bumbadida's Color Theme", //  "Spacegray Eighties" MODIFIED.
+    "author": "Bumbadida",
+
+    "variables": {
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        "COLOR_n0":  "rgb( 30,  30,  30)",
+        "COLOR__0":  "rgb( 45,  45,  45)",
+
+        "COLOR_n1":  "rgb( 38,  38,  38)",
+        "COLOR__1":  "rgb( 57,  57,  57)",
+
+        "COLOR__2":  "rgb( 81,  81,  81)",
+
+        "COLOR__3":  "rgb(116, 115, 105)",
+        "COLOR_a3": "rgba(116, 115, 105, 1.0)",
+
+        "COLOR_a4": "rgba(160, 159, 147, 1.0)",
+        "COLOR__4":  "rgb(160, 159, 147)",
+        "COLOR_z4":  "rgb(167, 173, 186)", // mod
+
+        "COLOR_a5": "rgba(211, 208, 200, 1.0)",
+        "COLOR__5":  "rgb(211, 208, 200)",
+
+        "COLOR__6":  "rgb(232, 230, 223)",
+
+        "COLOR_a7": "rgba(242, 240, 236, 1.0)",
+        "COLOR__7":  "rgb(242, 240, 236)",
+
+        "COLOR__8":  "rgb(242, 119, 122)",
+
+        "COLOR__A":  "rgb(254, 204, 102)",
+
+        "COLOR__C":  "rgb(102, 204, 204)",
+
+        "COLOR__MiniMap_Viewport": "rgba(255,255,255, 0.0625)",
+
+        "COLOR__Widget_Background":       "rgb( 24, 24, 24)",      // #181818
+        "COLOR__Widget_Caret":            "rgb(211,208,200)",      // #d3d0c8
+        "COLOR__Widget_Foreground":       "rgb(192,189,182)",      // #C0BDB6
+        "COLOR__Widget_Invisibles":       "rgb(116,115,105)",      // #747369
+        "COLOR__Widget_Selection":        "rgb( 81, 81, 81)",      // #515151
+        "COLOR__Widget_SelectionBorder": "rgba( 81, 81, 81, 0.0)", // #51515100   0 alpha ??
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    },
+    //  SETTINGS:
+    //      BumsTheme_sidebar_tree_xsmall
+    //      BumsTheme_sidebar_tree_small
+    //      BumsTheme_sidebar_tree_normal
+    //      BumsTheme_sidebar_tree_large
+    //      BumsTheme_sidebar_tree_xlarge
+    //
+    //      BumsTheme_sidebar_font_small
+    //      BumsTheme_sidebar_font_normal
+    //      BumsTheme_sidebar_font_large
+    //      BumsTheme_sidebar_font_xlarge
+    //
+    //      BumsTheme_fileicons
+    //
+    //      BumsTheme_color_expanded_folder
+    //
+    //      BumsTheme_tabs_font_small
+    //      BumsTheme_tabs_font_normal
+    //      BumsTheme_tabs_font_large
+    //      BumsTheme_tabs_font_xlarge
+    //
+    //      BumsTheme_tabs_auto_width
+    //      BumsTheme_tabs_small
+    //      BumsTheme_tabs_normal
+    //      BumsTheme_tabs_large
+    //      BumsTheme_tabs_xlarge
+    //
+    "rules": [
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // TABS (REGULAR)
+        // Tab set
+        { "class": "tabset_control",
+            "layer0.texture": "",
+            "layer0.tint": "var(COLOR_n0)",
+            "layer0.inner_margin": 0,
+            "layer0.opacity": 1,
+            "content_margin": 0,
+            "tab_overlap": 0,
+            "tab_width": 128,
+            "tab_min_width": 48,
+            "tab_height": 26,
+            "mouse_wheel_switch": false
+        },
+
+        { "class": "tabset_control", "settings": ["mouse_wheel_switches_tabs"], "mouse_wheel_switch": true },
+
+        // Tab element
+        { "class": "tab_control",
+            "content_margin": [8,0],
+            "max_margin_trim": 0,
+            "hit_test_level": 0,
+            "layer0.texture": "",
+            "layer0.tint": "var(COLOR_n0)",
+            "layer0.inner_margin": [5,5],
+            "layer0.opacity": 1
+        },
+
+        // Tab close state
+        { "class": "tab_control", "settings": ["show_tab_close_buttons"], "content_margin": [8,0] },
+        // Tab hover state
+        { "class": "tab_control", "attributes": ["hover"] },
+        // Tab active state
+        { "class": "tab_control", "attributes": ["selected"], "layer0.texture": "", "layer0.tint": "var(COLOR__0)" },
+
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // TAB BUTTONS
+        // Tab close button
+        { "class": "tab_close_button",
+            "layer0.texture": "MyTheme/assets/close.png",
+            "layer0.opacity": 0,
+            "layer0.tint": "var(COLOR__3)"
+        },
+
+        { "class": "tab_close_button", "settings": ["show_tab_close_buttons"], "content_margin": [8,8] },
+
+        { "class": "tab_close_button",
+            "parents": [{"class": "tab_control","attributes": ["hover"]}],
+            "layer0.texture": "MyTheme/assets/close.png",
+            "layer0.opacity": 1
+        },
+
+        { "class": "tab_close_button",
+            "parents": [{"class": "tab_control"}],
+            "attributes": ["hover"],
+            "layer0.opacity": 1,
+            "layer0.tint": "var(COLOR__8)"
+        },
+
+        { "class": "tab_close_button",
+            "parents": [{"class": "tab_control","attributes": ["selected"]}],
+            "layer0.opacity": 1
+        },
+
+        // Tab dirty button
+        { "class": "tab_close_button",
+            "parents": [{"class": "tab_control","attributes": ["dirty"]}],
+            "layer0.texture": "MyTheme/assets/circle.png",
+            "layer0.tint": "var(COLOR__A)",
+            "layer0.opacity": 1
+        },
+
+        { "class": "tab_close_button",
+            "settings": ["!show_tab_close_buttons"],
+            "parents": [{"class": "tab_control","attributes": ["dirty"]}],
+            "content_margin": [8,8],
+            "layer0.opacity": 1
+        },
+
+        { "class": "tab_close_button",
+            "parents": [{"class": "tab_control","attributes": ["dirty","hover"]}],
+            "layer0.texture": "MyTheme/assets/close.png",
+            "attributes": ["hover"],
+            "layer0.opacity": 1,
+            "layer0.tint": "var(COLOR__8)"
+        },
+
+        { "class": "tab_close_button", "parents": [{"class": "tab_control","attributes": ["dirty","selected"]}] },
+
+        // Tab highlight button
+        { "class": "tab_close_button", "settings": ["highlight_modified_tabs"], "parents": [{"class": "tab_control","attributes": ["dirty"]}]            },
+        { "class": "tab_close_button", "settings": ["highlight_modified_tabs"], "parents": [{"class": "tab_control","attributes": ["dirty","selected"]}] },
+
+        // Tab close button hover
+        { "class": "tab_close_button", "settings": ["show_tab_close_buttons"], "attributes": ["hover"] },
+
+        // Tab close button pressed
+        { "class": "tab_close_button", "settings": ["show_tab_close_buttons"], "attributes": ["pressed"], "layer0.opacity": 0.5 },
+
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // TAB LABELS
+        { "class": "tab_label", "fade": true,                                                     "fg": "var(COLOR__3)" },
+        { "class": "tab_label", "parents": [{"class": "tab_control","attributes": ["hover"]}],    "fg": "var(COLOR__5)" },
+        { "class": "tab_label", "parents": [{"class": "tab_control","attributes": ["selected"]}], "fg": "var(COLOR__6)" },
+        { "class": "tab_label", "attributes": ["transient"],                                      "font.italic": true   },
+
+        // Tab Labels font size
+        { "class": "tab_label", "settings": ["BumsTheme_tabs_font_small"],  "font.size": 10.0 },
+        { "class": "tab_label", "settings": ["BumsTheme_tabs_font_normal"], "font.size": 11.0 },
+        { "class": "tab_label", "settings": ["BumsTheme_tabs_font_large"],  "font.size": 12.0 },
+        { "class": "tab_label", "settings": ["BumsTheme_tabs_font_xlarge"], "font.size": 14.0 },
+
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // FOLD BUTTONS
+        { "class": "fold_button_control",
+            "layer0.texture": "MyTheme/assets/fold-right.png",
+            "layer0.tint": "var(COLOR__4)",
+            "layer0.opacity": 0.5,
+            "layer0.inner_margin": 0,
+            "content_margin": [8,8]
+        },
+        { "class": "fold_button_control", "attributes": ["hover"]           , "layer0.opacity": 0.7                            },
+        { "class": "fold_button_control", "attributes": ["expanded"]        , "layer0.texture": "MyTheme/assets/fold-down.png" },
+        { "class": "fold_button_control", "attributes": ["expanded","hover"] },
+
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // STANDARD SCROLLBARS
+        // Standard vertical scroll bar
+        { "class": "scroll_bar_control",
+            "layer0.texture": "",
+            "layer0.tint": "var(COLOR_n1)",
+            "layer0.opacity": 1,
+            "layer0.inner_margin": [0,0],
+            "blur": true
+        },
+        // Standard horizontal scroll bar
+        { "class": "scroll_bar_control",
+            "attributes": ["horizontal"],
+            "layer0.texture": "",
+            "layer0.tint": "var(COLOR_n1)",
+            "layer0.inner_margin": [0,0],
+            "blur": true
+        },
+        // Standard scroll bar corner
+        { "class": "scroll_corner_control",
+            "layer0.texture": "",
+            "layer0.tint": "var(COLOR_n1)",
+            "layer0.inner_margin": [0,0],
+            "layer0.opacity": 1
+        },
+        // Standard vertical scroll puck
+        { "class": "puck_control",
+            "layer0.texture": "",
+            "layer0.tint": [60, 60, 60],
+            "layer0.opacity": 1,
+            "layer0.inner_margin": [0,0],
+            "content_margin": [6,0],
+            "blur": false
+        },
+        // Standard horizontal scroll puck
+        { "class": "puck_control",
+            "attributes": ["horizontal"],
+            // "layer0.texture": "",
+            "layer0.tint": "var(COLOR__1)",
+            "layer0.inner_margin": [0,0],
+            "content_margin": [12,6],
+            "blur": false
+        },
+
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // OVERLAY SCROLLBARS
+        // Overlay toggle scroll bar
+        { "class": "scroll_area_control", "settings": ["overlay_scroll_bars"] , "overlay": true  },
+        { "class": "scroll_area_control", "settings": ["!overlay_scroll_bars"], "overlay": false },
+
+        // Overlay vertical scroll bar
+        { "class": "scroll_bar_control",
+            "settings": ["overlay_scroll_bars"],
+            // "layer0.texture": "",
+            "layer0.tint": "var(COLOR__0)",
+            "layer0.inner_margin": [0,5],
+            "layer0.opacity": 0,
+            "blur": false
+        },
+
+        // Overlay horizontal scroll bar
+        { "class": "scroll_bar_control",
+            "settings": ["overlay_scroll_bars"],
+            "attributes": ["horizontal"],
+            "layer0.inner_margin": [5,0],
+            "layer0.opacity": 0,
+            "blur": true
+        },
+
+        // Overlay vertical puck
+        { "class": "puck_control",
+            "settings": ["overlay_scroll_bars"],
+            "layer0.texture": "",
+            "layer0.inner_margin": [0,5],
+            "content_margin": [2,32],
+            "blur": true
+        },
+
+        // Overlay horizontal puck
+        { "class": "puck_control",
+            "settings": ["overlay_scroll_bars"],
+            "attributes": ["horizontal"],
+            "layer0.texture": "",
+            "layer0.inner_margin": [5,0],
+            "content_margin": [16,2],
+            "blur": true
+        },
+
+        // Overlay light puck (for dark content)
+        { "class": "puck_control",
+            "settings": ["overlay_scroll_bars"],
+            "attributes": ["dark"],
+            // "layer0.texture": "",
+            "layer0.tint": "var(COLOR__2)"
+        },
+
+        // Overlay light horizontal puck (for dark content)
+        { "class": "puck_control",
+            "settings": ["overlay_scroll_bars"],
+            "attributes": ["horizontal","dark"],
+            // "layer0.texture": "",
+            "layer0.tint": "var(COLOR__2)"
+        },
+
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // EMPTY WINDOW BACKGROUND
+        { "class": "sheet_container_control", "layer0.tint": "var(COLOR__0)", "layer0.opacity": 1 },
+
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // GRID LAYOUT
+        { "class": "grid_layout_control", "border_size": 1, "border_color": "var(COLOR_n0)" },
+
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // MINI MAP
+        { "class": "minimap_control", "viewport_color": "var(COLOR__MiniMap_Viewport)" },
+
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // LABELS
+        // General labels
+        { "class": "label_control", "color": "var(COLOR__3)" },
+
+        // Text field labels
+        { "class": "label_control", "parents": [{"class": "panel_control"}] },
+
+        // Button labels
+        { "class": "label_control",
+            "parents": [{"class": "button_control"}],
+            "font.bold": true,
+            "color": "var(COLOR__C)"
+        },
+
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // TOOLTIP
+        // Tooltip container
+        { "class": "tool_tip_control",
+            // "layer0.texture": "",
+            "layer0.tint": "var(COLOR__2)",
+            "layer0.inner_margin": [1,1],
+            "layer0.opacity": 1,
+            "content_margin": [4,4]
+        },
+
+        // Tooltip content
+        { "class": "tool_tip_label_control", "color": "var(COLOR__7)" },
+
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // STATUS BAR
+        // Status bar container
+        { "class": "status_bar",
+            "layer0.texture": "",
+            "layer0.tint": "var(COLOR_n0)",
+            "layer0.opacity": 1,
+            "content_margin": 4
+        },
+        // Status bar button
+        { "class": "status_button", "min_size": [92, 0] },
+        // Status bar label
+        { "class": "label_control", "parents": [{"class": "status_bar"}], "color": "var(COLOR__2)" },
+
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // SIDEBAR
+        // Sidebar container
+        { "class": "sidebar_container",
+            // "layer0.texture": "",
+            "layer0.opacity": 1,
+            "layer0.tint": "var(COLOR_n1)",
+            "layer0.inner_margin": [1,5,2,1],
+            "content_margin": [0,4,0,0]
+        },
+
+        // Sidebar tree
+        { "class": "sidebar_tree",
+            "row_padding": [8,4],
+            "indent": 12,
+            "indent_offset": 12,
+            "indent_top_level": false,
+            "dark_content": true
+        },
+
+        // Sidebar rows
+        { "class": "tree_row",
+            // "layer0.texture": "",
+            "layer0.tint": "var(COLOR__1)",
+            "layer0.opacity": 0,
+            "layer0.inner_margin": [1,1]
+        },
+
+        // Sidebar row selected
+        { "class": "tree_row", "attributes": ["selected"], "layer0.opacity": 1 },
+
+        // Sidebar heading
+        { "class": "sidebar_heading", "color": "var(COLOR__2)", "font.bold": true },
+
+        { "class": "sidebar_tree", "settings": ["BumsTheme_sidebar_tree_xsmall"], "row_padding": [8, 0] },
+        { "class": "sidebar_tree", "settings": ["BumsTheme_sidebar_tree_small"],  "row_padding": [8, 2] },
+        { "class": "sidebar_tree", "settings": ["BumsTheme_sidebar_tree_normal"], "row_padding": [8, 4] },
+        { "class": "sidebar_tree", "settings": ["BumsTheme_sidebar_tree_large"],  "row_padding": [8, 6] },
+        { "class": "sidebar_tree", "settings": ["BumsTheme_sidebar_tree_xlarge"], "row_padding": [8, 8] },
+
+        // Sidebar heading selected
+        { "class": "sidebar_heading", "parents": [{"class": "tree_row","attributes": ["selected"]}], "shadow_offset": [0,0] },
+
+        // Sidebar entry
+        { "class": "sidebar_label", "color": "var(COLOR__3)" },
+        { "class": "sidebar_label", "settings": ["BumsTheme_sidebar_font_small"],  "font.size": 10.0 },
+        { "class": "sidebar_label", "settings": ["BumsTheme_sidebar_font_normal"], "font.size": 11.0 },
+        { "class": "sidebar_label", "settings": ["BumsTheme_sidebar_font_large"],  "font.size": 12.0 },
+        { "class": "sidebar_label", "settings": ["BumsTheme_sidebar_font_xlarge"], "font.size": 14.0 },
+
+        // Sidebar folder entry
+        { "class": "sidebar_label", "parents": [{"class": "tree_row","attributes": ["expandable"]}], "color": "var(COLOR__3)"                              },
+        { "class": "sidebar_label", "parents": [{"class": "tree_row","attributes": ["hover"]}]     , "color": "var(COLOR__5)"                              },
+        { "class": "sidebar_label", "parents": [{"class": "tree_row","attributes": ["expandable"]}], "settings": ["bold_folder_labels"], "font.bold": true },
+
+        // Sidebar entry selected
+        { "class": "sidebar_label", "parents": [{"class": "tree_row","attributes": ["selected"]}], "color": "var(COLOR__6)" },
+
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // SIDEBAR - OPEN FILE ICONS
+        // Sidebar file close
+        { "class": "close_button",
+            "layer0.texture": "MyTheme/assets/close.png",
+            "layer0.opacity": 0,
+            "layer0.inner_margin": 0,
+            "layer0.tint": "var(COLOR__2)",
+            "content_margin": [8,8]
+        },
+        { "class": "close_button", "parents": [{"class": "tree_row","attributes": ["selected"]}], "layer0.opacity": 1 },
+        { "class": "close_button", "parents": [{"class": "tree_row","attributes": ["hover"]}]   , "layer0.opacity": 1 },
+
+        // Sidebar file dirty
+        { "class": "close_button",
+            "attributes": ["dirty"],
+            "layer0.texture": "MyTheme/assets/circle.png",
+            "layer0.opacity": 1,
+            "layer0.tint": "var(COLOR__A)"
+        },
+        { "class": "close_button",
+            "attributes": ["dirty"],
+            "parents": [{"class": "tree_row","attributes": ["selected"]}],
+            "layer0.texture": "MyTheme/assets/circle.png"
+        },
+
+        // Sidebar file close hover
+        { "class": "close_button", "attributes": ["hover"], "layer0.tint": "var(COLOR__8)" },
+        { "class": "close_button",
+            "attributes": ["dirty", "hover"],
+            "parents": [{"class": "tree_row","attributes": ["hover"]}],
+            "layer0.texture": "MyTheme/assets/close.png",
+            "layer0.tint": "var(COLOR__8)"
+        },
+
+
+        //  Margin | Border | Padding | >>CONTENT<< | Padding | Border | Margin
+
+
+
+
+//        // Tab close state
+//        { "class": "tab_control", "settings": ["show_tab_close_buttons"], "content_margin": [8,0] },
+//        { "class": "tab_close_button", "settings": ["show_tab_close_buttons"], "content_margin": [8,8] },
+//        { "class": "tab_close_button",
+//            "settings": ["!show_tab_close_buttons"],
+//            "parents": [{"class": "tab_control","attributes": ["dirty"]}],
+//            "content_margin": [8,8],
+//            "layer0.opacity": 1
+//        },
+//        // Tab close button hover
+//        { "class": "tab_close_button", "settings": ["show_tab_close_buttons"], "attributes": ["hover"] },
+//        // Tab close button pressed
+//        { "class": "tab_close_button", "settings": ["show_tab_close_buttons"], "attributes": ["pressed"], "layer0.opacity": 0.5 },
+
+
+
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // SIDEBAR - GENERAL FILE ICONS
+        // Sidebar group closed
+        { "class": "disclosure_button_control",
+            "content_margin": [8,8],
+            "layer0.texture": "MyTheme/assets/fold-right.png",
+            "layer0.tint": "var(COLOR__2)",
+            "layer0.opacity": 1,
+            "layer0.inner_margin": 0
+        },
+        { "class": "disclosure_button_control", "parents": [{"class": "tree_row","attributes": ["hover"]}], "layer0.tint": "var(COLOR__4)" },
+        { "class": "disclosure_button_control", "parents": [{"class": "tree_row","attributes": ["selected"]}] },
+
+        // Sidebar group open
+        { "class": "disclosure_button_control", "attributes": ["expanded"], "layer0.texture": "MyTheme/assets/fold-down.png" },
+        { "class": "disclosure_button_control", "attributes": ["expanded"], "parents": [{"class": "tree_row","attributes": ["hover"]}] },
+        { "class": "disclosure_button_control", "attributes": ["expanded"], "parents": [{"class": "tree_row","attributes": ["selected"]}], "layer0.texture": "MyTheme/assets/fold-down.png" },
+
+        // Sidebar folder closed
+        { "class": "icon_folder",
+            "layer0.texture": "MyTheme/assets/folder-closed.png",
+            "layer0.opacity": 0.5,
+            "layer0.tint": "var(COLOR_z4)",
+            "content_margin": [8, 8]
+        },
+        { "class": "icon_folder", "parents": [{"class": "tree_row","attributes": ["hover"]}]   , "layer0.opacity": 1.0 },
+        { "class": "icon_folder", "parents": [{"class": "tree_row","attributes": ["selected"]}] },
+
+        // Sidebar folder open
+        { "class": "icon_folder", "parents": [{"class": "tree_row","attributes": ["expanded"]}]            , "layer0.texture": "MyTheme/assets/folder-open.png" },
+        { "class": "icon_folder", "parents": [{"class": "tree_row","attributes": ["expanded", "hover"]}]     },
+        { "class": "icon_folder", "parents": [{"class": "tree_row","attributes": ["expanded", "selected"]}], "layer0.texture": "MyTheme/assets/folder-open.png" },
+
+        // Sidebar folder loading
+        { "class": "icon_folder_loading",
+            "layer0.texture":
+            {
+                "keyframes":
+                [
+                    "MyTheme/assets/spinner.png",
+                    "MyTheme/assets/spinner1.png",
+                    "MyTheme/assets/spinner2.png",
+                    "MyTheme/assets/spinner3.png",
+                    "MyTheme/assets/spinner4.png",
+                    "MyTheme/assets/spinner5.png",
+                    "MyTheme/assets/spinner6.png",
+                    "MyTheme/assets/spinner7.png"
+                ],
+                "loop": true,
+                "frame_time": 0.075
+            },
+            "layer0.opacity": 0.6,
+            "content_margin": [8, 8]
+        },
+
+        // Sidebar symlink folder icon
+        {
+            "class": "icon_folder_dup",
+            "layer0.texture": "MyTheme/assets/folder-dup.png",
+            "layer0.opacity": 0.5,
+            "layer0.tint": "var(COLOR_z4)",
+            "content_margin": [8, 8]
+        },
+        {
+            "class": "icon_folder_dup",
+            "parents": [{ "class": "tree_row", "attributes": ["hover"] }],
+            "layer0.opacity": 1
+        },
+
+        // Sidebar file icons
+        { "class": "icon_file_type",
+            // layer0.texture is filled in by code with the relevant icon name
+            "layer0.opacity": 0.6,
+            "content_margin": [8, 8]
+        },
+        { "class": "icon_file_type", "parents": [{"class": "tree_row", "attributes": ["hover"]}]   , "layer0.opacity": 1.0 },
+        { "class": "icon_file_type", "parents": [{"class": "tree_row", "attributes": ["selected"]}], "layer0.opacity": 1.0 },
+
+        { "class": "sidebar_tree",              "settings": ["BumsTheme_fileicons"] , "indent_offset":  1      },
+        { "class": "disclosure_button_control", "settings": ["BumsTheme_fileicons"] , "layer0.opacity": 0      },
+        { "class": "icon_file_type",            "settings": ["!BumsTheme_fileicons"], "content_margin": [0, 0] },
+        { "class": "icon_folder",               "settings": ["!BumsTheme_fileicons"], "content_margin": [0, 0] },
+        { "class": "icon_folder_dup",           "settings": ["!BumsTheme_fileicons"], "content_margin": [0, 0] },
+        { "class": "icon_folder_loading",       "settings": ["!BumsTheme_fileicons"], "content_margin": [0, 0] },
+
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // STANDARD TEXT BUTTONS
+        // Default button state
+        { "class": "button_control",
+            "content_margin": [4,8,4,8],
+            "min_size": [64,0],
+            "layer0.texture": "",
+            "layer0.opacity": 1,
+            "layer0.tint": "var(COLOR_n0)",
+            "layer0.inner_margin": [8,8]
+        },
+        { "class": "button_control", "attributes": ["hover"],   "layer0.texture": "", "layer0.tint": "var(COLOR_n1)" }, //  ButtonState: Hover
+        { "class": "button_control", "attributes": ["pressed"], "layer0.texture": "", "layer0.tint": "var(COLOR_n0)" }, //  ButtonState: Pressed
+
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // TEXT INPUT FIELD
+        // Text input field item
+        { "class": "text_line_control",
+            "layer0.texture": "",
+            "layer0.tint": "var(COLOR_n0)",
+            "layer0.opacity": 1,
+            "content_margin": 6
+        },
+
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // PANEL BACKGROUNDS
+        // Bottom panel background
+        { "class": "panel_control",
+            "layer0.texture": "",
+            "layer0.inner_margin": [0,0],
+            "layer0.opacity": 1,
+            "layer0.tint": "var(COLOR_n0)",
+            "content_margin": 0
+        },
+
+        // Quick panel background
+        { "class": "overlay_control",
+            "layer0.opacity": 1,
+            "layer1.texture": "",
+            "layer1.tint": "var(COLOR__1)",
+            "layer1.inner_margin": [0,0,0,0],
+            "layer1.opacity": 1,
+            "content_margin": 0
+        },
+
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // QUICK PANEL
+        { "class": "quick_panel",
+            "row_padding": 8,
+            "layer0.tint": "var(COLOR__1)",
+            "layer0.opacity": 1,
+            "dark_content": true
+        },
+        { "class": "quick_panel_row",
+            "layer0.texture": "",
+            "layer0.tint": "var(COLOR__1)",
+            "layer0.inner_margin": 8,
+            "layer0.opacity": 1
+        },
+        { "class": "quick_panel_row",
+            "attributes": ["selected"],
+            "layer0.texture": "",
+            "layer0.tint": "var(COLOR_n1)"
+        },
+        { "class": "quick_panel_label",
+            "fg": "var(COLOR_a4)",
+            "match_fg": "var(COLOR_a5)",
+            "selected_fg": "var(COLOR_a5)",
+            "selected_match_fg": "var(COLOR_a7)"
+        },
+        { "class": "quick_panel_path_label",
+            "fg": "var(COLOR_a3)",
+            "match_fg": "var(COLOR_a4)",
+            "selected_fg": "var(COLOR_a3)",
+            "selected_match_fg": "var(COLOR_a4)"
+        },
+        { "class": "quick_panel_score_label",
+            "fg": "var(COLOR_a3)",
+            "selected_fg": "var(COLOR_a3)"
+        },
+
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // MINI QUICK PANEL
+        { "class": "mini_quick_panel_row",
+            "layer0.texture": "",
+            "layer0.tint": "var(COLOR__1)",
+            "layer0.opacity": 1
+        },
+        { "class": "mini_quick_panel_row",
+            "attributes": ["selected"],
+            "layer0.texture": "",
+            "layer0.tint": "var(COLOR_n1)"
+        },
+
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // CODE COMPLETION DROPDOWN
+        { "class": "popup_control",
+            "content_margin": [0,0],
+            "layer0.tint": "var(COLOR__1)",
+            "layer0.opacity": 1
+        },
+        { "class": "auto_complete", "row_padding": [4,4] },
+        { "class": "auto_complete_label",
+            "fg": "var(COLOR_a3)",
+            "match_fg": "var(COLOR_a5)",
+            "selected_fg": "var(COLOR_a3)",
+            "selected_match_fg": "var(COLOR_a5)"
+        },
+        { "class": "table_row",
+            "layer0.texture": "",
+            "layer0.tint": "var(COLOR__2)",
+            "layer0.opacity": 0,
+            "layer0.inner_margin": [3,1]
+        },
+        { "class": "table_row", "attributes": ["selected"], "layer0.opacity": 1 },
+
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // BOTTOM PANEL BUTTONS
+        // Button group middle
+        { "class": "icon_button_control", "layer1.opacity": 0, "content_margin": 7  }, // "layer1.texture": "",
+        { "class": "icon_button_control", "attributes": ["selected"], "layer0.opacity": 0    },
+        // Button group left
+        { "class": "icon_button_control", "attributes": ["left"]                    }, // "layer0.texture": ""
+        // Button group left
+        { "class": "icon_button_control", "attributes": ["left"]                    }, // "layer0.texture": ""
+        { "class": "icon_button_control", "attributes": ["left","selected"]         }, // "layer0.texture": ""
+        // Button group right
+        { "class": "icon_button_control", "attributes": ["right"]                   }, // "layer0.texture": ""
+        { "class": "icon_button_control", "attributes": ["right","selected"]        }, // "layer0.texture": ""
+        // Button single
+        { "class": "icon_button_control", "attributes": ["left","right"]            }, // "layer0.texture": ""
+        { "class": "icon_button_control", "attributes": ["left","right","selected"] }, // "layer0.texture": ""
+
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // BOTTOM PANEL ICONS - GROUP 1
+        // Regex search button
+        { "class": "icon_regex",      "layer0.texture": "MyTheme/assets/regex.png", "layer0.tint": "var(COLOR__2)", "layer0.opacity": 1, "content_margin": 8 },
+        { "class": "icon_regex"     , "parents": [{"class": "icon_button_control","attributes": ["selected"]}], "layer0.tint": "var(COLOR__7)" },
+
+        // Case sensitive search button
+        { "class": "icon_case",       "layer0.texture": "MyTheme/assets/casesens.png", "layer0.tint": "var(COLOR__2)", "layer0.opacity": 1, "content_margin": 8 },
+        { "class": "icon_case"      , "parents": [{"class": "icon_button_control","attributes": ["selected"]}], "layer0.tint": "var(COLOR__7)" },
+
+        // Match whole word search button
+        { "class": "icon_whole_word", "layer0.texture": "MyTheme/assets/wholeword.png", "layer0.tint": "var(COLOR__2)", "layer0.opacity": 1, "content_margin": 8 },
+        { "class": "icon_whole_word", "parents": [{"class": "icon_button_control","attributes": ["selected"]}], "layer0.tint": "var(COLOR__7)" },
+
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // BOTTOM PANEL ICONS - GROUP 1 (EXTENDED: FIND IN FILES)
+        // Show search context button
+        { "class": "icon_context",
+            "layer0.texture": "MyTheme/assets/context.png",
+            "layer0.tint": "var(COLOR__2)",
+            "layer0.opacity": 1,
+            "content_margin": 8
+        },
+        { "class": "icon_context",    "parents": [{"class": "icon_button_control","attributes": ["selected"]}], "layer0.tint": "var(COLOR__7)" },
+
+        // Use search buffer
+        { "class": "icon_use_buffer",
+            "layer0.texture": "MyTheme/assets/buffer.png",
+            "layer0.tint": "var(COLOR__2)",
+            "layer0.opacity": 1,
+            "content_margin": 8
+        },
+        { "class": "icon_use_buffer", "parents": [{"class": "icon_button_control","attributes": ["selected"]}], "layer0.tint": "var(COLOR__7)" },
+
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // BOTTOM PANEL ICONS - GROUP 2
+        // Reverse search direction button (ST2 only)
+        { "class": "icon_reverse",
+            "layer0.texture": "MyTheme/assets/reverse.png",
+            "layer0.tint": "var(COLOR__2)",
+            "layer0.opacity": 1,
+            "content_margin": 8
+        },
+        { "class": "icon_reverse"     , "parents": [{"class": "icon_button_control","attributes": ["selected"]}], "layer0.tint": "var(COLOR__7)" },
+
+        // Search wrap button
+        { "class": "icon_wrap",
+            "layer0.texture": "MyTheme/assets/wrap.png",
+            "layer0.tint": "var(COLOR__2)",
+            "layer0.opacity": 1,
+            "content_margin": 8
+        },
+        { "class": "icon_wrap"        , "parents": [{"class": "icon_button_control","attributes": ["selected"]}], "layer0.tint": "var(COLOR__7)" },
+
+        // Search in selection button
+        { "class": "icon_in_selection",
+            "layer0.texture": "MyTheme/assets/selection.png",
+            "layer0.tint": "var(COLOR__2)",
+            "layer0.opacity": 1,
+            "content_margin": 8
+        },
+        { "class": "icon_in_selection", "parents": [{"class": "icon_button_control","attributes": ["selected"]}], "layer0.tint": "var(COLOR__7)" },
+
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // BOTTOM PANEL ICONS - GROUP 3
+        // Preserve case button
+        { "class": "icon_preserve_case",
+            "layer0.texture": "MyTheme/assets/lock.png",
+            "layer0.tint": "var(COLOR__2)",
+            "layer0.opacity": 1,
+            "content_margin": 8
+        },
+        { "class": "icon_preserve_case", "parents": [{"class": "icon_button_control","attributes": ["selected"]}], "layer0.tint": "var(COLOR__7)" },
+
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // BOTTOM PANEL ICONS - GROUP 4
+        // Highlight results button
+        { "class": "icon_highlight",
+            "layer0.texture": "MyTheme/assets/highlight.png",
+            "layer0.tint": "var(COLOR__2)",
+            "layer0.opacity": 1,
+            "content_margin": 8
+        },
+        { "class": "icon_highlight", "parents": [{"class": "icon_button_control","attributes": ["selected"]}], "layer0.tint": "var(COLOR__7)" },
+
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // SIDEBAR FOLDER COLORING
+        { "class": "disclosure_button_control",
+            "settings": ["BumsTheme_color_expanded_folder"],
+            "attributes": ["expanded"],
+            "layer0.tint": "var(COLOR__A)"
+        },
+
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // TABS SIZING
+        { "class": "tabset_control", "settings": ["BumsTheme_tabs_auto_width"], "tab_width":   0 },
+        { "class": "tabset_control", "settings": ["BumsTheme_tabs_small"]     , "tab_height": 22 },
+        { "class": "tabset_control", "settings": ["BumsTheme_tabs_normal"]    , "tab_height": 26 },
+        { "class": "tabset_control", "settings": ["BumsTheme_tabs_large"]     , "tab_height": 34 },
+        { "class": "tabset_control", "settings": ["BumsTheme_tabs_xlarge"]    , "tab_height": 40 },
+
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // TITLE BAR
+        { "class": "title_bar", "settings": ["!disable_custom_title_bar"], "fg": "var(COLOR__4)", "bg": "var(COLOR_n0)" }
+
+
+    ]
+}
+
