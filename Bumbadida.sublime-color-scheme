@@ -1,0 +1,320 @@
+{
+    "name": "Bumbadida's Color Scheme",
+    "author": "Bumbadida",
+
+    "globals": {
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        "background":                       "#292929",      //  The default background color.                                         Grey: 2C2C2C  292929    Green: 242C22  272C26  282C28      282C29
+        "foreground":                       "#FAE4DC",      //  The default color for text.
+
+        "invisibles":                       "#3B3A32",      //  The color for whitespace, when rendered.
+                                                            //  When not specified, defaults to foreground with an opacity of 0.35.
+
+        "caret":                            "#D8D4D0",      //  The color of the caret.
+
+        "block_caret":                      "#D8D4D080",    //  [3190] The color of the caret when using a block caret
+      //"block_caret_border":               "#000000",      //  [4086] The color of the border for a block caret
+      //"block_caret_underline":            "#000000",      //  [4086] The color of the underline the block caret is drawn as when overlapping with a selection
+      //"block_caret_corner_style":         "round",        //  [4086] The style of corners to use for block carets.
+                                                            //            OPTIONS = [ round {DEFAULT}, cut, square ]
+      //"block_caret_corner_radius":        "3",            //  [4086] The radius to use when the block_caret_corner_style is round or cut.
+
+        "line_highlight":                   "#303030",      //  The background color of the line containing the caret.                Grey: 323232  303030    Green: 2D322D  2D322E      2C322E
+                                                            //  Only used when the highlight_line setting is enabled.
+
+        //#####################################################################################################################################################
+      //"misspelling":                      "#000000",      //  The color to use for the squiggly underline drawn under misspelled words.
+
+      //"fold_marker":                      "#000000",      //  The color to use for the marker that indicates content has been folded.
+
+      //"minimap_border":                   "#000000",      //  The color of the border drawn around the viewport area of the minimap when the setting draw_minimap_border is enabled.
+                                                            //  Note that the viewport is normally only visible on hover, unless the always_show_minimap_viewport setting is enabled.
+
+      //"accent":                           "#000000",      //  A color made available for use by the theme.
+                                                            //  The Default theme uses this to highlight modified tabs when the "highlight_modified_tabs" is enabled.
+
+        //#####################################################################################################################################################
+        "gutter":                           "#282828",      //  The background color of the gutter.                                   Grey: 292929  282828    Green: 232925  252926
+        "gutter_foreground":                "#42403F",      //  The color of line numbers in the gutter.                              Grey: 42403F            Green: 3C423E  3C423C
+      //"gutter_foreground_highlight":      "#000000",      //  [4050] The color of line numbers in the gutter when a line is highlighted.
+
+        //#####################################################################################################################################################
+      //"line_diff_width":                  "#000000",      //  [3186] The width of the diff lines.  [ 1 to 8 ]
+      //"line_diff_added":                  "#000000",      //  [3189] The color of diff markers for added lines.
+      //"line_diff_modified":               "#000000",      //  [3186] The color of diff markers for modified lines.
+      //"line_diff_deleted":                "#000000",      //  [3189] The color of diff markers for deleted lines.
+
+        //#####################################################################################################################################################
+        "selection":                        "#90551B",      //  The background color of selected text
+        "selection_foreground":             "#fffff8",      //  A color that will override the scope-based text color of the selection.
+
+        "selection_border":                 "#884A0D",      //  The color for the border of the selection.
+        "selection_border_width":           "2",            //  The width of the selection border.  [ 0 to 4 ]
+
+        "inactive_selection":               "#785634",      //  The background color of a selection in a view that.
+        "inactive_selection_border":        "#64492D",      //  [4074] The color for the border of the selection in a view that is not currently focused.
+        "inactive_selection_foreground":    "#222222",      //  A color that will override the scope-based text color
+                                                            //  of the selection in a view that is not currently focused.
+
+        "selection_corner_style":           "round",        //  The style of corners to use on selections.
+                                                            //      OPTIONS = [ round {DEFAULT}, cut, square ]
+        "selection_corner_radius":          "2",            //  The radius to use when the selection_corner_style is "round" or "cut".
+
+        //#####################################################################################################################################################
+        "highlight":                        "#177F88",      //  The border color for ?other? matches when the Highlight matches option is selected in the Find panel.       33ECFE 1D8690   167780   168027
+                                                            //  Also used to highlight matches in Find in Files results.
+        "find_highlight":                   "#177F88",      //  The background color of text matched by the Find panel.
+        "find_highlight_foreground":        "#E0FFFF",      //  A color that will override the scope-based text color.
+
+      //"scroll_highlight":                 "#000000",      //  [4050] The color search result positions drawn on top of the scroll bar.
+      //"scroll_selected_highlight":        "#000000",      //  [4050] The color of the selected search result position drawn on top of the scroll bar.
+
+        //#####################################################################################################################################################
+        //  Ruler locations are set by the rulers setting.
+      //"rulers":                           "#000000",      //  The color used to draw rulers.
+
+        //#####################################################################################################################################################
+        //  Guides are controlled globally by the draw_indent_guides setting.
+      //"guide":                            "#000000",      //  The color used to draw indent guides.
+                                                            //  Only used if "draw_normal" is present in "indent_guide_options".
+
+        "active_guide":                     "#9D550FB0",    //  The color used to draw the indent guides for the indentation levels containing the caret.
+                                                            //  Only used if "draw_active" is present in "indent_guide_options".
+
+      //"stack_guide":                      "#000000",      //  The color used to draw the indent guides for the parent indentation levels of the indentation level containing the caret.
+                                                            //  Only used if "draw_active" is present in "indent_guide_options".
+
+        //#####################################################################################################################################################
+        //  Bracket matching is controlled globally by the match_brackets setting.
+        "brackets_options":                 "underline",    //  How brackets are highlighted when the caret is next to one.
+                                                            //      OPTIONS(space-separated) = [ underline, stippled_underline, squiggly_underline, foreground, bold, italic ]
+
+        "brackets_foreground":              "#F8F8F2A5",    //  The color to use when drawing the style specified by brackets_options.
+
+        "bracket_contents_options":         "underline",    //  How brackets are highlighted when the caret is positioned in between a pair of brackets.
+                                                            //      OPTIONS(space-separated) = [ underline, stippled_underline, squiggly_underline, foreground ]
+
+        "bracket_contents_foreground":      "#F8F8F2A5",    //  The color to use when drawing the style specified by brackets_contents_options.
+
+        //#####################################################################################################################################################
+        //  Tag matching is controlled globally by the match_tags setting.
+        "tags_options":            "stippled_underline",    //  How tags are highlighted when the caret is inside of one.
+                                                            //      OPTIONS(space-separated) = [ underline, stippled_underline, squiggly_underline, foreground ]
+
+      //"tags_foreground":                    "#000000",    //  The color to use when drawing the style specified by tags_options.
+
+        //#####################################################################################################################################################
+        "shadow":                             "#00000080",  //  The color of the shadow used to show when a text area can be horizontally scrolled.
+        "shadow_width":                       "32",         //  The width of the shadow in device-independent pixels. [ 0 to 32 ]
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    },
+    //#################################################################################################################################
+    //### Red:      .
+    //
+    //    Orange1:  FF602B FF8F1F
+    //    Orange2:  FF7733
+    //    Orange3:  FD9720        FD971F
+    //    Cream1:   E8D0C0 F0D7C7 F0DCCE F0C7A5
+    //    Cream2:   F0CEA5 F8D1A0 F8B96C
+    //    Tan:      F8D5AA
+    //
+    //~~~ Yellow:   E6DB74        F0E479
+    //
+    //    Lime:     C3FF8F ACE07E A4E070 A8E070 A8E070        A6E22E
+    //
+    //### Green:    59E247
+    //
+    //~~~ Cyan:     66EFAD
+    //    Teal:     83A598
+    //
+    //    Sky:      66D9EF        3FBFFF
+    //
+    //### Blue:     2FA8FF
+    //
+    //~~~ Violet:   AE81FF
+    //
+    //    Pink:     D3869B E09AAC F0ACBE FFB7CA
+    //    Pink2:    FFAFCA FFABC7 FF7FAA FF6FB7
+    //    Fuchsia:  F92672 F92875        FF2870
+    //
+    //    Burgundy: .
+    //
+    //    Red-ish:  FF4750        FF4952
+    //
+    //#################################################################################################################################
+    //*** Black:
+    //    GreyWarm: 75715E
+    //~~~ Grey:
+    //    GreyCool:
+    //*** White:
+    //#################################################################################################################################
+    "rules": [
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //#################################################################################################################################
+        //#################################################################################################################################
+        {"scope": "comment"                                 , "foreground": "#75715E", "font_style": ""                   },
+          //{"scope": "comment.block"                       , "foreground": "#ZZZZZZ", "font_style": ""                   },
+            {"scope": "comment.documentation"               , "foreground": "#908C79", "font_style": ""                   },
+          //{"scope": "comment.line"                        , "foreground": "#ZZZZZZ", "font_style": ""                   },
+
+
+        {"scope": "constant"                                , "foreground": "#AE81FF", "font_style": ""                   },
+          //{"scope": "constant.character"                  , "foreground": "#AE81FF", "font_style": ""                   },
+            {"scope": "constant.character.escape"           , "foreground": "#FF5F37", "font_style": ""                   },
+
+          //{"scope": "constant.language"                   , "foreground": "#AE81FF", "font_style": ""                   },
+          //{"scope": "constant.language.boolean"           , "foreground": "#AE81FF", "font_style": ""                   },
+
+            {"scope": "constant.numeric"                    , "foreground": "#AE81FF", "font_style": ""                   },
+          //{"scope": "constant.numeric.float"              , "foreground": "#AE81FF", "font_style": ""                   },
+          //{"scope": "constant.numeric.integer"            , "foreground": "#AE81FF", "font_style": ""                   },
+          //{"scope": "constant.numeric.binary"             , "foreground": "#AE81FF", "font_style": ""                   },
+          //{"scope": "constant.numeric.octal"              , "foreground": "#AE81FF", "font_style": ""                   },
+          //{"scope": "constant.numeric.hexadecimal"        , "foreground": "#AE81FF", "font_style": ""                   },
+
+          //{"scope": "constant.other"                      , "foreground": "#AE81FF", "font_style": ""                   },
+            {"scope": "constant.other.placeholder"          , "foreground": "#799AFF", "font_style": ""                   },  //  Escape -- Insertion
+
+
+      //{"scope": "entity"                                  , "foreground": "#ZZZZZZ", "font_style": ""                   },
+          //{"scope": "entity.name"                         , "foreground": "#ZZZZZZ", "font_style": ""                   },
+            {"scope": "entity.name.class"                   , "foreground": "#A6E22E", "font_style": "underline"          },
+            {"scope": "entity.name.function"                , "foreground": "#66D9EF", "font_style": ""                   },  //  User -- Function
+            {"scope": "entity.name.goto-label"              , "foreground": "#66D9EF", "font_style": ""                   },
+          //{"scope": "entity.name.section"                 , "foreground": "#ZZZZZZ", "font_style": ""                   },
+            {"scope": "entity.name.tag"                     , "foreground": "#FF2870", "font_style": ""                   },
+
+            {"scope": "entity.other.attribute-name"         , "foreground": "#A6E22E", "font_style": ""                   },
+            {"scope": "entity.other.inherited-class"        , "foreground": "#A6E22E", "font_style": "italic underline"   },
+
+
+        {"scope": "invalid"                                 , "foreground": "#FFFFFF", "background": "#FF5990"            }, // FF5990  FCE6EE,644E55
+            {"scope": "invalid.deprecated"                  , "foreground": "#FFFFFF", "background": "#AE81FF"            }, // AE81FF  FCE6EE,483E5C
+
+          //{"scope": "invalid.illegal"                     , "foreground": "#ZZZZZZ", "background": "#ZZZZZZ"            },
+          //{"scope": "invalid.illegal.stray"               , "foreground": "#ZZZZZZ", "background": "#ZZZZZZ"            },
+          //{"scope": "invalid.illegal.you-forgot-semicolon", "foreground": "#ZZZZZZ", "background": "#ZZZZZZ"            },
+
+
+        {"scope": "keyword"                                 , "foreground": "#FF2870", "font_style": ""                   },
+          //{"scope": "keyword.control"                     , "foreground": "#ZZZZZZ", "font_style": ""                   },
+
+          //{"scope": "keyword.declaration"                 , "foreground": "#ZZZZZZ", "font_style": ""                   },
+            {"scope": "keyword.declaration.function"        , "foreground": "#FF2870", "font_style": ""                   },
+            {"scope": "keyword.declaration.struct"          , "foreground": "#FF7733", "font_style": "italic"             },  //  User -- Type  (Declaration & Usage in AppGameKit)
+
+            {"scope": "keyword.operator"                    , "foreground": "#FF2870", "font_style": ""                   },
+          //{"scope": "keyword.operator.agk"                , "foreground": "#FD971F", "font_style": ""                   },
+            {"scope": "keyword.operator.function"           , "foreground": "#FF5F37", "font_style": ""                   },  //  CUBE_SCRIPT: TextureCommands
+          //{"scope": "keyword.operator.logical"            , "foreground": "#FF2870", "font_style": ""                   },
+
+
+      //{"scope": "punctuation"                             , "foreground": "#ZZZZZZ", "font_style": ""                   },
+            {"scope": "punctuation.accessor"                , "foreground": "#59E247", "font_style": ""                   }, // FDD81F
+
+          //{"scope": "punctuation.definition"              , "foreground": "#E865DD", "font_style": ""                   },
+          //{"scope": "punctuation.definition.generic"      , "foreground": "#E865DD", "font_style": ""                   },
+
+            {"scope": "punctuation.section"                 , "foreground": "#E865DD", "font_style": ""                   },
+          //{"scope": "punctuation.section.braces"          , "foreground": "#E865DD", "font_style": ""                   },
+          //{"scope": "punctuation.section.brackets"        , "foreground": "#E865DD", "font_style": ""                   },
+          //{"scope": "punctuation.section.parens"          , "foreground": "#E865DD", "font_style": ""                   },
+
+            {"scope": "punctuation.separator"               , "foreground": "#FF2870", "font_style": ""                   },
+            {"scope": "punctuation.terminator"              , "foreground": "#FF2870", "font_style": ""                   },
+
+
+        {"scope": "storage"                                 , "foreground": "#FF2870", "font_style": ""                   },
+          //{"scope": "storage.modifier"                    , "foreground": "#FF7733", "font_style": ""                   },  //  ""
+            {"scope": "storage.type"                        , "foreground": "#FF4952", "font_style": ""                   },  //  Built-In -- DataType
+
+
+        {"scope": "string"                                  , "foreground": "#F0E474", "font_style": ""                   },
+
+
+      //{"scope": "support"                                 , "foreground": "#ZZZZZZ", "font_style": ""                   },
+            {"scope": "support.class"                       , "foreground": "#66D9EF", "font_style": "italic"             },
+            {"scope": "support.constant"                    , "foreground": "#66D9EF", "font_style": ""                   },
+            {"scope": "support.function"                    , "foreground": "#A6E22E", "font_style": ""                   },  //  Built-In -- Function
+          //{"scope": "support.other.variable"              , "foreground": "#ZZZZZZ", "font_style": ""                   },
+            {"scope": "support.type"                        , "foreground": "#66D9EF", "font_style": "italic"             },
+
+
+        {"scope": "variable"                                , "foreground": "#F8D5AA", "font_style": "italic"             },
+            {"scope": "variable.function"                   , "foreground": "#59E247", "font_style": "italic"             },
+            {"scope": "variable.language"                   , "foreground": "#FFB47F", "font_style": "italic"             },  //  Built-In -- Variable
+            {"scope": "variable.parameter"                  , "foreground": "#FD971F", "font_style": "italic"             },
+          //{"scope": "variable.other.readwrite.cfg"        , "foreground": "#FD971F", "font_style": "bold"               },
+
+
+        //#################################################################################################################################
+        //#################################################################################################################################
+        {"scope": "text.find-in-files"                               , "foreground": "#E0D5CB"   },  //  Base scope
+        {"scope": "entity.name.filename.find-in-files"               , "foreground": "#F0E474"   },  //  Highlights the filename
+        {"scope": "constant.other.find-in-files"                     , "foreground": "#FF0000"   },  //  Highlights lines beginning with ERROR
+        {"scope": "constant.numeric.line-number.find-in-files"       , "foreground": "#AE81FF80" },  //  Highlights the line number of lines surrounding the result
+        {"scope": "constant.numeric.line-number.match.find-in-files" , "foreground": "#AE81FFFF" },  //  Highlights the line number containing the match
+
+
+        //#################################################################################################################################
+        //#################################################################################################################################
+        //{"scope": "string.regexp"                                    , "foreground": "#C4FF89"},
+          //{"scope": "string.regexp.literal"                          , "foreground": "#C4FF89"},
+          //{"scope": "string.regexp.interpolated"                     , "foreground": "#C4FF89"},
+          //{"scope": "string.regexp.group"                            , "foreground": "#C4FF89"},
+          //{"scope": "string.regexp.replace.extended.simple_delimiter", "foreground": "#C4FF89"},
+          //{"scope": "string.regexp.format.nested_braces"             , "foreground": "#C4FF89"},
+          //{"scope": "string.regexp.format.nested_parens"             , "foreground": "#C4FF89"},
+          //{"scope": "string.regexp.format.single_quote"              , "foreground": "#C4FF89"},
+          //{"scope": "string.regexp.format.simple_delimiter"          , "foreground": "#C4FF89"},
+          //{"scope": "string.regexp.format.nested_ltgt"               , "foreground": "#C4FF89"},
+          //{"scope": "string.regexp.format"                           , "foreground": "#C4FF89"},
+          //{"scope": "string.regexp.nested_ltgt"                      , "foreground": "#C4FF89"},
+          //{"scope": "string.regexp.nested_parens"                    , "foreground": "#C4FF89"},
+          //{"scope": "string.regexp.nested_braces"                    , "foreground": "#C4FF89"},
+          //{"scope": "string.regexp.find-m.simple-delimiter"          , "foreground": "#C4FF89"},
+          //{"scope": "string.regexp.find-m.single-quote"              , "foreground": "#C4FF89"},
+          //{"scope": "string.regexp.find"                             , "foreground": "#C4FF89"},
+          //{"scope": "string.regexp.character-class"                  , "foreground": "#C4FF89"},
+          //{"scope": "string.regexp.arbitrary-repitition"             , "foreground": "#C4FF89"},
+          //{"scope": "string.regexp.arbitrary-repetition"             , "foreground": "#C4FF89"},
+          //{"scope": "string.regexp.single-quoted"                    , "foreground": "#C4FF89"},
+          //{"scope": "string.regexp.double-quoted"                    , "foreground": "#C4FF89"},
+          //{"scope": "string.regexp.replace"                          , "foreground": "#C4FF89"},
+
+
+        //#################################################################################################################################
+        //#################################################################################################################################
+        {"scope": "meta.diff, meta.diff.header"                             , "foreground": "#75715E" },
+        {"scope": "meta.structure.dictionary.json string.quoted.double.json", "foreground": "#CFCFC2" },
+
+        {"scope": "markup.deleted"                                          , "foreground": "#FF2870" },
+        {"scope": "markup.changed"                                          , "foreground": "#E6DB74" },
+        {"scope": "markup.inserted"                                         , "foreground": "#A6E22E" },
+
+
+        //#################################################################################################################################
+        //#################################################################################################################################
+        {"scope": "entity.name.label.ahk"                                   , "foreground": "#05DC96" },
+        {"scope": "keyword.control.return.ahk"                              , "foreground": "#59EE44" },
+        {"scope": "keyword.other.ahk"                                       , "foreground": "#01B900" },
+        {"scope": "label.line.ahk"                                          , "foreground": "#FFD940" },
+        {"scope": "meta.structure.linebreak.ahk"                            , "foreground": "#B60703" },
+        {"scope": "punctuation.ahk"                                         , "foreground": "#F2FE65" },
+
+
+        //#################################################################################################################################
+        //#################################################################################################################################
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ]
+}
+
