@@ -9,7 +9,7 @@
         "background":                       "#292929",      //  The default background color.                                         Grey: 2C2C2C  292929    Green: 242C22  272C26  282C28      282C29
         "foreground":                       "#FAE4DC",      //  The default color for text.
 
-        "invisibles":                       "#3B3A32",      //  The color for whitespace, when rendered.
+        "invisibles":                       "#35342D",      //  The color for whitespace, when rendered.
                                                             //            [ Defaults to foreground with opacity 0.35, when not specified. ]
 
         "caret":                            "#D8D4D0",      //  The color of the caret.
