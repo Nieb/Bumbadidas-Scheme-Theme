@@ -1,5 +1,5 @@
 {
-    "name": "Bumbadida's Color Scheme",
+    "name":   "Bumbadida's Color Scheme",
     "author": "Bumbadida",
 
     "globals": {
@@ -10,19 +10,18 @@
         "foreground":                       "#FAE4DC",      //  The default color for text.
 
         "invisibles":                       "#3B3A32",      //  The color for whitespace, when rendered.
-                                                            //  When not specified, defaults to foreground with an opacity of 0.35.
+                                                            //            [ Defaults to foreground with opacity 0.35, when not specified. ]
 
         "caret":                            "#D8D4D0",      //  The color of the caret.
-
         "block_caret":                      "#D8D4D080",    //  [3190] The color of the caret when using a block caret
       //"block_caret_border":               "#000000",      //  [4086] The color of the border for a block caret
       //"block_caret_underline":            "#000000",      //  [4086] The color of the underline the block caret is drawn as when overlapping with a selection
       //"block_caret_corner_style":         "round",        //  [4086] The style of corners to use for block carets.
                                                             //            OPTIONS = [ round {DEFAULT}, cut, square ]
-      //"block_caret_corner_radius":        "3",            //  [4086] The radius to use when the block_caret_corner_style is round or cut.
+      //"block_caret_corner_radius":        "3",            //  [4086] The radius to use when the "block_caret_corner_style" is round or cut.
 
         "line_highlight":                   "#303030",      //  The background color of the line containing the caret.                Grey: 323232  303030    Green: 2D322D  2D322E      2C322E
-                                                            //  Only used when the highlight_line setting is enabled.
+                                                            //  Only used when the "highlight_line" setting is enabled.
 
         //#####################################################################################################################################################
       //"misspelling":                      "#000000",      //  The color to use for the squiggly underline drawn under misspelled words.
@@ -60,7 +59,7 @@
 
         "selection_corner_style":           "round",        //  The style of corners to use on selections.
                                                             //      OPTIONS = [ round {DEFAULT}, cut, square ]
-        "selection_corner_radius":          "2",            //  The radius to use when the selection_corner_style is "round" or "cut".
+        "selection_corner_radius":          "2",            //  The radius to use when the "selection_corner_style" is "round" or "cut".
 
         //#####################################################################################################################################################
         "highlight":                        "#177F88",      //  The border color for ?other? matches when the Highlight matches option is selected in the Find panel.       33ECFE 1D8690   167780   168027
@@ -106,7 +105,7 @@
       //"tags_foreground":                    "#000000",    //  The color to use when drawing the style specified by tags_options.
 
         //#####################################################################################################################################################
-        "shadow":                             "#00000080",  //  The color of the shadow used to show when a text area can be horizontally scrolled.
+        "shadow":                             "#00000070",  //  The color of the shadow used to show when a text area can be horizontally scrolled.
         "shadow_width":                       "32",         //  The width of the shadow in device-independent pixels. [ 0 to 32 ]
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -256,6 +255,7 @@
 
         //#################################################################################################################################
         //#################################################################################################################################
+        //  FIND IN FILES -- RESULTS:
         {"scope": "text.find-in-files"                               , "foreground": "#E0D5CB"   },  //  Base scope
         {"scope": "entity.name.filename.find-in-files"               , "foreground": "#F0E474"   },  //  Highlights the filename
         {"scope": "constant.other.find-in-files"                     , "foreground": "#FF0000"   },  //  Highlights lines beginning with ERROR
