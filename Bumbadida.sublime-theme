@@ -37,12 +37,12 @@
 
         "COLOR__MiniMap_Viewport": "rgba(255,255,255, 0.0625)",
 
-        "COLOR__Widget_Background":       "rgb( 24, 24, 24)",      // #181818
-        "COLOR__Widget_Caret":            "rgb(211,208,200)",      // #d3d0c8
-        "COLOR__Widget_Foreground":       "rgb(192,189,182)",      // #C0BDB6
-        "COLOR__Widget_Invisibles":       "rgb(116,115,105)",      // #747369
-        "COLOR__Widget_Selection":        "rgb( 81, 81, 81)",      // #515151
-        "COLOR__Widget_SelectionBorder": "rgba( 81, 81, 81, 0.0)", // #51515100   0 alpha ??
+        "COLOR__Widget_Background":       "rgb( 24, 24, 24)",
+        "COLOR__Widget_Caret":            "rgb(211,208,200)",
+        "COLOR__Widget_Foreground":       "rgb(192,189,182)",
+        "COLOR__Widget_Invisibles":       "rgb(116,115,105)",
+        "COLOR__Widget_Selection":        "rgb( 81, 81, 81)",
+        "COLOR__Widget_SelectionBorder": "rgba( 81, 81, 81, 0.5)",
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
