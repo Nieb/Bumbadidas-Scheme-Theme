@@ -9,7 +9,7 @@
         "background":                       "#292929",      //  The default background color.                                         Grey: 2C2C2C  292929    Green: 242C22  272C26  282C28      282C29
         "foreground":                       "#FAE4DC",      //  The default color for text.
 
-        "invisibles":                       "#35342D",      //  The color for whitespace, when rendered.
+        "invisibles":                       "#36352E",      //  The color for whitespace, when rendered.
                                                             //            [ Defaults to foreground with opacity 0.35, when not specified. ]
 
         "caret":                            "#D8D4D0",      //  The color of the caret.
@@ -164,6 +164,7 @@
           //{"scope": "comment.line"                        , "foreground": "#ZZZZZZ", "font_style": ""                   },
 
 
+
         {"scope": "constant"                                , "foreground": "#AE81FF", "font_style": ""                   },
           //{"scope": "constant.character"                  , "foreground": "#AE81FF", "font_style": ""                   },
             {"scope": "constant.character.escape"           , "foreground": "#FF5F37", "font_style": ""                   },
@@ -182,6 +183,7 @@
             {"scope": "constant.other.placeholder"          , "foreground": "#799AFF", "font_style": ""                   },  //  Escape -- Insertion
 
 
+
       //{"scope": "entity"                                  , "foreground": "#ZZZZZZ", "font_style": ""                   },
           //{"scope": "entity.name"                         , "foreground": "#ZZZZZZ", "font_style": ""                   },
             {"scope": "entity.name.class"                   , "foreground": "#A6E22E", "font_style": "underline"          },
@@ -189,9 +191,11 @@
             {"scope": "entity.name.goto-label"              , "foreground": "#66D9EF", "font_style": ""                   },
           //{"scope": "entity.name.section"                 , "foreground": "#ZZZZZZ", "font_style": ""                   },
             {"scope": "entity.name.tag"                     , "foreground": "#FF2870", "font_style": ""                   },
+            {"scope": "entity.name.type.struct"             , "foreground": "#FF7733", "font_style": "italic"             },  //  User -- Struct  (Types in AGK)
 
             {"scope": "entity.other.attribute-name"         , "foreground": "#A6E22E", "font_style": ""                   },
             {"scope": "entity.other.inherited-class"        , "foreground": "#A6E22E", "font_style": "italic underline"   },
+
 
 
         {"scope": "invalid"                                 , "foreground": "#FFFFFF", "background": "#FF5990"            }, // FF5990  FCE6EE,644E55
@@ -202,17 +206,19 @@
           //{"scope": "invalid.illegal.you-forgot-semicolon", "foreground": "#ZZZZZZ", "background": "#ZZZZZZ"            },
 
 
+
         {"scope": "keyword"                                 , "foreground": "#FF2870", "font_style": ""                   },
           //{"scope": "keyword.control"                     , "foreground": "#ZZZZZZ", "font_style": ""                   },
 
           //{"scope": "keyword.declaration"                 , "foreground": "#ZZZZZZ", "font_style": ""                   },
-            {"scope": "keyword.declaration.function"        , "foreground": "#FF2870", "font_style": ""                   },
-            {"scope": "keyword.declaration.struct"          , "foreground": "#FF7733", "font_style": "italic"             },  //  User -- Type  (Declaration & Usage in AppGameKit)
+          //{"scope": "keyword.declaration.function"        , "foreground": "#ZZZZZZ", "font_style": ""                   },
+          //{"scope": "keyword.declaration.struct"          , "foreground": "#ZZZZZZ", "font_style": ""                   },
 
             {"scope": "keyword.operator"                    , "foreground": "#FF2870", "font_style": ""                   },
           //{"scope": "keyword.operator.agk"                , "foreground": "#FD971F", "font_style": ""                   },
             {"scope": "keyword.operator.function"           , "foreground": "#FF5F37", "font_style": ""                   },  //  CUBE_SCRIPT: TextureCommands
           //{"scope": "keyword.operator.logical"            , "foreground": "#FF2870", "font_style": ""                   },
+
 
 
       //{"scope": "punctuation"                             , "foreground": "#ZZZZZZ", "font_style": ""                   },
@@ -230,12 +236,15 @@
             {"scope": "punctuation.terminator"              , "foreground": "#FF2870", "font_style": ""                   },
 
 
+
         {"scope": "storage"                                 , "foreground": "#FF2870", "font_style": ""                   },
           //{"scope": "storage.modifier"                    , "foreground": "#FF7733", "font_style": ""                   },  //  ""
             {"scope": "storage.type"                        , "foreground": "#FF4952", "font_style": ""                   },  //  Built-In -- DataType
 
 
+
         {"scope": "string"                                  , "foreground": "#F0E474", "font_style": ""                   },
+
 
 
       //{"scope": "support"                                 , "foreground": "#ZZZZZZ", "font_style": ""                   },
@@ -246,15 +255,17 @@
             {"scope": "support.type"                        , "foreground": "#66D9EF", "font_style": "italic"             },
 
 
+
         {"scope": "variable"                                , "foreground": "#F8D5AA", "font_style": "italic"             },
             {"scope": "variable.function"                   , "foreground": "#59E247", "font_style": "italic"             },
 
             {"scope": "variable.language"                   , "foreground": "#FFB47F", "font_style": "italic"             },  //  Built-In -- Variable
-            {"scope": "variable.language.this"              , "foreground": "#FFB47F", "font_style": "bold italic"             },
+            {"scope": "variable.language.this"              , "foreground": "#FFB47F", "font_style": "bold italic"        },
 
             {"scope": "variable.parameter"                  , "foreground": "#FD971F", "font_style": "italic"             },
 
           //{"scope": "variable.other.readwrite.cfg"        , "foreground": "#FD971F", "font_style": "bold"               },  //  User -- Variable
+
 
 
         //#################################################################################################################################
