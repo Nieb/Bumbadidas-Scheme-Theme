@@ -198,8 +198,8 @@
 
 
 
-        {"scope": "invalid"                                 , "foreground": "#FFFFFF", "background": "#FF5990"            }, // FF5990  FCE6EE,644E55
-            {"scope": "invalid.deprecated"                  , "foreground": "#FFFFFF", "background": "#AE81FF"            }, // AE81FF  FCE6EE,483E5C
+        {"scope": "invalid"                                 , "foreground": "#FFFFFF", "background": "#FF5990"            },  // FF5990  FCE6EE,644E55
+            {"scope": "invalid.deprecated"                  , "foreground": "#FFFFFF", "background": "#AE81FF"            },  // AE81FF  FCE6EE,483E5C
 
           //{"scope": "invalid.illegal"                     , "foreground": "#ZZZZZZ", "background": "#ZZZZZZ"            },
           //{"scope": "invalid.illegal.stray"               , "foreground": "#ZZZZZZ", "background": "#ZZZZZZ"            },
@@ -222,7 +222,7 @@
 
 
       //{"scope": "punctuation"                             , "foreground": "#ZZZZZZ", "font_style": ""                   },
-            {"scope": "punctuation.accessor"                , "foreground": "#59E247", "font_style": ""                   }, // FDD81F
+            {"scope": "punctuation.accessor"                , "foreground": "#59E247", "font_style": ""                   },  // FDD81F
 
           //{"scope": "punctuation.definition"              , "foreground": "#E865DD", "font_style": ""                   },
           //{"scope": "punctuation.definition.generic"      , "foreground": "#E865DD", "font_style": ""                   },
@@ -265,6 +265,10 @@
             {"scope": "variable.parameter"                  , "foreground": "#FD971F", "font_style": "italic"             },
 
           //{"scope": "variable.other.readwrite.cfg"        , "foreground": "#FD971F", "font_style": "bold"               },  //  User -- Variable
+
+
+
+        {"scope": "wildcard"                                , "foreground": "#FD971F", "font_style": ""                   },
 
 
 
