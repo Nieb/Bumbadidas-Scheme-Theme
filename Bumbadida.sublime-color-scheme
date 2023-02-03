@@ -268,7 +268,7 @@
 
 
 
-        {"scope": "wildcard"                                , "foreground": "#FD971F", "font_style": ""                   },
+        {"scope": "wildcard"                                , "foreground": "#FFA200", "font_style": ""                   },  //FFA200 FF961F FD971F FF5F37 FF7733
 
 
 
