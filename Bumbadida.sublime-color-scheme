@@ -256,7 +256,7 @@
 
 
 
-        {"scope": "variable"                                , "foreground": "#F8D5AA", "font_style": "italic"             },
+        {"scope": "variable"                                , "foreground": "#F8D5AA", "font_style": "italic"             },  //F8D5AA
             {"scope": "variable.function"                   , "foreground": "#59E247", "font_style": "italic"             },
 
             {"scope": "variable.language"                   , "foreground": "#FFB47F", "font_style": "italic"             },  //  Built-In -- Variable
