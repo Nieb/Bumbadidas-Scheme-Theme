@@ -188,11 +188,10 @@
           //{"scope": "entity.name"                         , "foreground": "#ZZZZZZ", "font_style": ""                   },
             {"scope": "entity.name.class"                   , "foreground": "#A6E22E", "font_style": "underline"          },
             {"scope": "entity.name.function"                , "foreground": "#66D9EF", "font_style": ""                   },  //  User -- Function
-            {"scope": "entity.name.function.cfg"            , "foreground": "#2DE04B", "font_style": ""                   },  //  CUBE_SCRIPT: CommonAlias
             {"scope": "entity.name.goto-label"              , "foreground": "#66D9EF", "font_style": ""                   },
           //{"scope": "entity.name.section"                 , "foreground": "#ZZZZZZ", "font_style": ""                   },
             {"scope": "entity.name.tag"                     , "foreground": "#FF2870", "font_style": ""                   },
-            {"scope": "entity.name.type.struct"             , "foreground": "#FF7733", "font_style": "italic"             },  //  User -- Struct  (Types in AGK)
+            {"scope": "entity.name.type.struct"             , "foreground": "#FF7733", "font_style": "italic"             },  //  User -- Struct  (TYPE in AGK)
 
             {"scope": "entity.other.attribute-name"         , "foreground": "#A6E22E", "font_style": ""                   },
             {"scope": "entity.other.inherited-class"        , "foreground": "#A6E22E", "font_style": "italic underline"   },
@@ -252,6 +251,7 @@
             {"scope": "support.class"                       , "foreground": "#66D9EF", "font_style": "italic"             },
             {"scope": "support.constant"                    , "foreground": "#66D9EF", "font_style": ""                   },
             {"scope": "support.function"                    , "foreground": "#A6E22E", "font_style": ""                   },  //  Built-In -- Function
+            {"scope": "support.function.library"            , "foreground": "#2DE04B", "font_style": ""                   },  //  Built-In -- Function
           //{"scope": "support.other.variable"              , "foreground": "#ZZZZZZ", "font_style": ""                   },
             {"scope": "support.type"                        , "foreground": "#66D9EF", "font_style": "italic"             },
 
@@ -263,9 +263,9 @@
             {"scope": "variable.language"                   , "foreground": "#FFB47F", "font_style": "italic"             },  //  Built-In -- Variable
             {"scope": "variable.language.this"              , "foreground": "#FFB47F", "font_style": "bold italic"        },
 
-            {"scope": "variable.parameter"                  , "foreground": "#FD971F", "font_style": "italic"             },
-
             {"scope": "variable.other.readwrite.cfg"        , "foreground": "#8FF88F", "font_style": "italic"             },  //  CUBE_SCRIPT: Alias     B2F86C 7CF87C
+
+            {"scope": "variable.parameter"                  , "foreground": "#FD971F", "font_style": "italic"             },
 
 
 
