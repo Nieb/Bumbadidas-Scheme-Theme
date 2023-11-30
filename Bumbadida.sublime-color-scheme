@@ -62,7 +62,7 @@
         "selection_corner_radius":          "2",            //  The radius to use when the "selection_corner_style" is "round" or "cut".
 
         //#####################################################################################################################################################
-        "highlight":                        "#2BEDFFB8",    //  The border color for ?other? matches when the Highlight matches option is selected in the Find panel.       33ECFE 1D8690   167780   168027
+        "highlight":                        "#2BEDFFB8",    //  The border color for other matches when the Highlight matches option is selected in the Find panel.       33ECFE 1D8690   167780   168027
                                                             //  Also used to highlight matches in Find in Files results.
         "find_highlight":                   "#2BEDFFB8",    //  The background color of text matched by the Find panel.
         "find_highlight_foreground":        "#E0FFFF",      //  A color that will override the scope-based text color.
@@ -87,12 +87,12 @@
 
         //#####################################################################################################################################################
         //  Bracket matching is controlled globally by the match_brackets setting.
-        "brackets_options":                 "underline",    //  How brackets are highlighted when the caret is next to one.
+        "brackets_options":                 "",             //  How brackets are highlighted when the caret is next to one.
                                                             //      OPTIONS(space-separated) = [ underline, stippled_underline, squiggly_underline, foreground, bold, italic ]
 
         "brackets_foreground":              "#F8F8F2A5",    //  The color to use when drawing the style specified by brackets_options.
 
-        "bracket_contents_options":         "underline",    //  How brackets are highlighted when the caret is positioned in between a pair of brackets.
+        "bracket_contents_options":         "",             //  How brackets are highlighted when the caret is positioned in between a pair of brackets.
                                                             //      OPTIONS(space-separated) = [ underline, stippled_underline, squiggly_underline, foreground ]
 
         "bracket_contents_foreground":      "#F8F8F2A5",    //  The color to use when drawing the style specified by brackets_contents_options.
