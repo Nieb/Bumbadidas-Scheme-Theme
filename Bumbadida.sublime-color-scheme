@@ -72,7 +72,7 @@
 
         //#####################################################################################################################################################
         //  Ruler locations are set by the rulers setting.
-      //"rulers":                           "#000000",      //  The color used to draw rulers.
+        "rulers":                           "#36352E",      //  The color used to draw rulers.   36352E 3A3931 3C3B33 44433A 504D40
 
         //#####################################################################################################################################################
         //  Guides are controlled globally by the draw_indent_guides setting.
@@ -105,7 +105,7 @@
       //"tags_foreground":                    "#000000",    //  The color to use when drawing the style specified by tags_options.
 
         //#####################################################################################################################################################
-        "shadow":                             "#00000070",  //  The color of the shadow used to show when a text area can be horizontally scrolled.
+        "shadow":                             "#00000060",  //  The color of the shadow used to show when a text area can be horizontally scrolled.
         "shadow_width":                       "32",         //  The width of the shadow in device-independent pixels. [ 0 to 32 ]
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -158,118 +158,118 @@
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //#################################################################################################################################
         //#################################################################################################################################
-        {"scope": "comment"                                 , "foreground": "#75715E", "font_style": ""                   },
-          //{"scope": "comment.block"                       , "foreground": "#ZZZZZZ", "font_style": ""                   },
-            {"scope": "comment.documentation"               , "foreground": "#908C79", "font_style": ""                   },
-          //{"scope": "comment.line"                        , "foreground": "#ZZZZZZ", "font_style": ""                   },
+        {"scope": "comment"                                 , "foreground": "#75715E", "font_style": ""                   },  //
+          //{"scope": "comment.block"                       , "foreground": "#______", "font_style": ""                   },  //
+            {"scope": "comment.documentation"               , "foreground": "#908C79", "font_style": ""                   },  //
+          //{"scope": "comment.line"                        , "foreground": "#______", "font_style": ""                   },  //
 
 
 
-        {"scope": "constant"                                , "foreground": "#AE81FF", "font_style": ""                   },
-          //{"scope": "constant.character"                  , "foreground": "#AE81FF", "font_style": ""                   },
-            {"scope": "constant.character.escape"           , "foreground": "#FF5F37", "font_style": ""                   },
+        {"scope": "constant"                                , "foreground": "#AE81FF", "font_style": ""                   },  //
+          //{"scope": "constant.character"                  , "foreground": "#AE81FF", "font_style": ""                   },  //
+            {"scope": "constant.character.escape"           , "foreground": "#FF5F37", "font_style": ""                   },  //  Escape__Character
 
-          //{"scope": "constant.language"                   , "foreground": "#AE81FF", "font_style": ""                   },
-          //{"scope": "constant.language.boolean"           , "foreground": "#AE81FF", "font_style": ""                   },
+          //{"scope": "constant.language"                   , "foreground": "#AE81FF", "font_style": ""                   },  //
+          //{"scope": "constant.language.boolean"           , "foreground": "#AE81FF", "font_style": ""                   },  //
 
-            {"scope": "constant.numeric"                    , "foreground": "#AE81FF", "font_style": ""                   },
-          //{"scope": "constant.numeric.float"              , "foreground": "#AE81FF", "font_style": ""                   },
-          //{"scope": "constant.numeric.integer"            , "foreground": "#AE81FF", "font_style": ""                   },
-          //{"scope": "constant.numeric.binary"             , "foreground": "#AE81FF", "font_style": ""                   },
-          //{"scope": "constant.numeric.octal"              , "foreground": "#AE81FF", "font_style": ""                   },
-          //{"scope": "constant.numeric.hexadecimal"        , "foreground": "#AE81FF", "font_style": ""                   },
+            {"scope": "constant.numeric"                    , "foreground": "#AE81FF", "font_style": ""                   },  //
+          //{"scope": "constant.numeric.float"              , "foreground": "#AE81FF", "font_style": ""                   },  //
+          //{"scope": "constant.numeric.integer"            , "foreground": "#AE81FF", "font_style": ""                   },  //
+          //{"scope": "constant.numeric.binary"             , "foreground": "#AE81FF", "font_style": ""                   },  //
+          //{"scope": "constant.numeric.octal"              , "foreground": "#AE81FF", "font_style": ""                   },  //
+          //{"scope": "constant.numeric.hexadecimal"        , "foreground": "#AE81FF", "font_style": ""                   },  //
 
-          //{"scope": "constant.other"                      , "foreground": "#AE81FF", "font_style": ""                   },
-            {"scope": "constant.other.placeholder"          , "foreground": "#799AFF", "font_style": ""                   },  //  Escape -- Insertion
+          //{"scope": "constant.other"                      , "foreground": "#AE81FF", "font_style": ""                   },  //
+            {"scope": "constant.other.placeholder"          , "foreground": "#799AFF", "font_style": ""                   },  //  Escape__Insertion
 
 
 
-      //{"scope": "entity"                                  , "foreground": "#ZZZZZZ", "font_style": ""                   },
-          //{"scope": "entity.name"                         , "foreground": "#ZZZZZZ", "font_style": ""                   },
-            {"scope": "entity.name.class"                   , "foreground": "#A6E22E", "font_style": "underline"          },
+      //{"scope": "entity"                                  , "foreground": "#______", "font_style": ""                   },  //
+          //{"scope": "entity.name"                         , "foreground": "#______", "font_style": ""                   },  //
+            {"scope": "entity.name.class"                   , "foreground": "#A6E22E", "font_style": "underline"          },  //
             {"scope": "entity.name.function"                , "foreground": "#66D9EF", "font_style": ""                   },  //  User -- Function
-            {"scope": "entity.name.goto-label"              , "foreground": "#66D9EF", "font_style": ""                   },
-          //{"scope": "entity.name.section"                 , "foreground": "#ZZZZZZ", "font_style": ""                   },
-            {"scope": "entity.name.tag"                     , "foreground": "#FF2870", "font_style": ""                   },
-            {"scope": "entity.name.type.struct"             , "foreground": "#FF7733", "font_style": "italic"             },  //  User -- Struct  (TYPE in AGK)
+            {"scope": "entity.name.goto-label"              , "foreground": "#C098E9", "font_style": ""                   },  //
+          //{"scope": "entity.name.section"                 , "foreground": "#______", "font_style": ""                   },  //
+            {"scope": "entity.name.tag"                     , "foreground": "#FF2870", "font_style": ""                   },  //
+            {"scope": "entity.name.type.struct"             , "foreground": "#FF7733", "font_style": "italic"             },  //  User -- Struct                [AGK: TYPE]
 
-            {"scope": "entity.other.attribute-name"         , "foreground": "#A6E22E", "font_style": ""                   },
-            {"scope": "entity.other.inherited-class"        , "foreground": "#A6E22E", "font_style": "italic underline"   },
+            {"scope": "entity.other.attribute-name"         , "foreground": "#A6E22E", "font_style": ""                   },  //
+            {"scope": "entity.other.inherited-class"        , "foreground": "#A6E22E", "font_style": "italic underline"   },  //
 
 
 
         {"scope": "invalid"                                 , "foreground": "#FFFFFF", "background": "#FF5990"            },  // FF5990  FCE6EE,644E55
             {"scope": "invalid.deprecated"                  , "foreground": "#FFFFFF", "background": "#AE81FF"            },  // AE81FF  FCE6EE,483E5C
 
-          //{"scope": "invalid.illegal"                     , "foreground": "#ZZZZZZ", "background": "#ZZZZZZ"            },
-          //{"scope": "invalid.illegal.stray"               , "foreground": "#ZZZZZZ", "background": "#ZZZZZZ"            },
-          //{"scope": "invalid.illegal.you-forgot-semicolon", "foreground": "#ZZZZZZ", "background": "#ZZZZZZ"            },
+          //{"scope": "invalid.illegal"                     , "foreground": "#______", "background": "#______"            },  //
+          //{"scope": "invalid.illegal.stray"               , "foreground": "#______", "background": "#______"            },  //
+          //{"scope": "invalid.illegal.you-forgot-semicolon", "foreground": "#______", "background": "#______"            },  //
 
 
 
-        {"scope": "keyword"                                 , "foreground": "#FF2870", "font_style": ""                   },
-          //{"scope": "keyword.control"                     , "foreground": "#ZZZZZZ", "font_style": ""                   },
+        {"scope": "keyword"                                 , "foreground": "#FF2870", "font_style": ""                   },  //
+          //{"scope": "keyword.control"                     , "foreground": "#______", "font_style": ""                   },  //
 
-          //{"scope": "keyword.declaration"                 , "foreground": "#ZZZZZZ", "font_style": ""                   },
-          //{"scope": "keyword.declaration.function"        , "foreground": "#ZZZZZZ", "font_style": ""                   },
-          //{"scope": "keyword.declaration.struct"          , "foreground": "#ZZZZZZ", "font_style": ""                   },
+          //{"scope": "keyword.declaration"                 , "foreground": "#______", "font_style": ""                   },  //
+          //{"scope": "keyword.declaration.function"        , "foreground": "#______", "font_style": ""                   },  //
+          //{"scope": "keyword.declaration.struct"          , "foreground": "#______", "font_style": ""                   },  //
 
-            {"scope": "keyword.operator"                    , "foreground": "#FF2870", "font_style": ""                   },
-          //{"scope": "keyword.operator.agk"                , "foreground": "#FD971F", "font_style": ""                   },
-            {"scope": "keyword.operator.function"           , "foreground": "#FF5F37", "font_style": ""                   },  //  CUBE_SCRIPT: TextureCommands
-          //{"scope": "keyword.operator.logical"            , "foreground": "#FF2870", "font_style": ""                   },
+            {"scope": "keyword.operator"                    , "foreground": "#FF2870", "font_style": ""                   },  //
+          //{"scope": "keyword.operator.agk"                , "foreground": "#FD971F", "font_style": ""                   },  //
+            {"scope": "keyword.operator.function"           , "foreground": "#FF5F37", "font_style": ""                   },  //                                [CubeScript: TextureCommands]
+          //{"scope": "keyword.operator.logical"            , "foreground": "#FF2870", "font_style": ""                   },  //
 
 
 
-      //{"scope": "punctuation"                             , "foreground": "#ZZZZZZ", "font_style": ""                   },
+      //{"scope": "punctuation"                             , "foreground": "#______", "font_style": ""                   },  //
             {"scope": "punctuation.accessor"                , "foreground": "#59E247", "font_style": ""                   },  // FDD81F
 
-          //{"scope": "punctuation.definition"              , "foreground": "#E865DD", "font_style": ""                   },
-          //{"scope": "punctuation.definition.generic"      , "foreground": "#E865DD", "font_style": ""                   },
+          //{"scope": "punctuation.definition"              , "foreground": "#E865DD", "font_style": ""                   },  //
+          //{"scope": "punctuation.definition.generic"      , "foreground": "#E865DD", "font_style": ""                   },  //
 
-            {"scope": "punctuation.section"                 , "foreground": "#E865DD", "font_style": ""                   },
-          //{"scope": "punctuation.section.braces"          , "foreground": "#E865DD", "font_style": ""                   },
-          //{"scope": "punctuation.section.brackets"        , "foreground": "#E865DD", "font_style": ""                   },
-          //{"scope": "punctuation.section.parens"          , "foreground": "#E865DD", "font_style": ""                   },
+            {"scope": "punctuation.section"                 , "foreground": "#E865DD", "font_style": ""                   },  //
+          //{"scope": "punctuation.section.braces"          , "foreground": "#E865DD", "font_style": ""                   },  //
+          //{"scope": "punctuation.section.brackets"        , "foreground": "#E865DD", "font_style": ""                   },  //
+          //{"scope": "punctuation.section.parens"          , "foreground": "#E865DD", "font_style": ""                   },  //
 
-            {"scope": "punctuation.separator"               , "foreground": "#FF2870", "font_style": ""                   },
-            {"scope": "punctuation.terminator"              , "foreground": "#FF2870", "font_style": ""                   },
+            {"scope": "punctuation.separator"               , "foreground": "#FF2870", "font_style": ""                   },  //
+            {"scope": "punctuation.terminator"              , "foreground": "#FF2870", "font_style": ""                   },  //
 
 
 
-        {"scope": "storage"                                 , "foreground": "#FF2870", "font_style": ""                   },
+        {"scope": "storage"                                 , "foreground": "#FF2870", "font_style": ""                   },  //
           //{"scope": "storage.modifier"                    , "foreground": "#FF7733", "font_style": ""                   },  //  ""
-            {"scope": "storage.type"                        , "foreground": "#FF4952", "font_style": ""                   },  //  Built-In -- DataType
+            {"scope": "storage.type"                        , "foreground": "#FF4952", "font_style": ""                   },  //  BuiltIn -- DataType
 
 
 
-        {"scope": "string"                                  , "foreground": "#F0E474", "font_style": ""                   },
+        {"scope": "string"                                  , "foreground": "#F0E474", "font_style": ""                   },  //
 
 
 
-      //{"scope": "support"                                 , "foreground": "#ZZZZZZ", "font_style": ""                   },
-            {"scope": "support.class"                       , "foreground": "#66D9EF", "font_style": "italic"             },
-            {"scope": "support.constant"                    , "foreground": "#66D9EF", "font_style": ""                   },
-            {"scope": "support.function"                    , "foreground": "#A6E22E", "font_style": ""                   },  //  Built-In -- Function
-            {"scope": "support.function.library"            , "foreground": "#2DE04B", "font_style": ""                   },  //  Built-In -- Function
-          //{"scope": "support.other.variable"              , "foreground": "#ZZZZZZ", "font_style": ""                   },
-            {"scope": "support.type"                        , "foreground": "#66D9EF", "font_style": "italic"             },
+      //{"scope": "support"                                 , "foreground": "#______", "font_style": ""                   },  //
+            {"scope": "support.class"                       , "foreground": "#66D9EF", "font_style": "italic"             },  //
+            {"scope": "support.constant"                    , "foreground": "#66D9EF", "font_style": ""                   },  //
+            {"scope": "support.function"                    , "foreground": "#A6E22E", "font_style": ""                   },  //  BuiltIn -- Function
+            {"scope": "support.function.library"            , "foreground": "#2DE04B", "font_style": ""                   },  //  BuiltIn -- Function
+          //{"scope": "support.other.variable"              , "foreground": "#______", "font_style": ""                   },  //
+            {"scope": "support.type"                        , "foreground": "#66D9EF", "font_style": "italic"             },  //
 
 
 
-        {"scope": "variable"                                , "foreground": "#F8D5AA", "font_style": "italic"             },  //F8D5AA
-            {"scope": "variable.function"                   , "foreground": "#59E247", "font_style": "italic"             },
+        {"scope": "variable"                                , "foreground": "#F8D5AA", "font_style": "italic"             },  //
+            {"scope": "variable.function"                   , "foreground": "#59E247", "font_style": "italic"             },  //
 
-            {"scope": "variable.language"                   , "foreground": "#FFB47F", "font_style": "italic"             },  //  Built-In -- Variable
-            {"scope": "variable.language.this"              , "foreground": "#FFB47F", "font_style": "bold italic"        },
+            {"scope": "variable.language"                   , "foreground": "#FFB47F", "font_style": "italic"             },  //  BuiltIn -- Variable
+            {"scope": "variable.language.this"              , "foreground": "#FFB47F", "font_style": "bold italic"        },  //
 
-            {"scope": "variable.other.readwrite.cfg"        , "foreground": "#8FF88F", "font_style": "italic"             },  //  CUBE_SCRIPT: Alias     B2F86C 7CF87C
+            {"scope": "variable.other.readwrite.cfg"        , "foreground": "#8FF88F", "font_style": "italic"             },  //            [CubeScript: Alias] B2F86C 7CF87C
 
-            {"scope": "variable.parameter"                  , "foreground": "#FD971F", "font_style": "italic"             },
+            {"scope": "variable.parameter"                  , "foreground": "#FD971F", "font_style": "italic"             },  //
 
 
 
-        {"scope": "wildcard"                                , "foreground": "#FFA200", "font_style": ""                   },  //FFA200 FF961F FD971F FF5F37 FF7733
+        {"scope": "wildcard"                                , "foreground": "#FFA200", "font_style": ""                   },  // FF961F FD971F FF5F37 FF7733
 
 
 
